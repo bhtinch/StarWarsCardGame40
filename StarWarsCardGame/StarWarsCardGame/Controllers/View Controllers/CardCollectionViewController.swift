@@ -119,3 +119,20 @@ extension CardCollectionViewController {
         present(alert, animated: true, completion: nil)
     }
 }
+
+//  MARK: - FILTER VIEW CONTROLLER DELEGATE METHOD
+extension CardCollectionViewController: FilterViewControllerDelegate {
+    func setFaction(isJedi: Bool) {
+        factionIsJedi = isJedi
+        shuffleCards()
+        updateView()
+    }
+}
+
+//  MARK: - NAVIGATION
+extension CardCollectionViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as? FilterViewController
+        destination?.delegate = self
+    }
+}
