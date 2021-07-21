@@ -17,20 +17,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="vtL-3V-xq4">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="vtL-3V-xq4">
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cardCell" id="0pE-1I-8dl">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cardCell" id="0pE-1I-8dl" customClass="PersonaCardCollectionViewCell" customModule="StarWarsCardGame" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="oA2-rc-L4H">
                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZuT-uf-9N1">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ZuT-uf-9N1" firstAttribute="width" secondItem="oA2-rc-L4H" secondAttribute="width" id="B5f-jO-8cO"/>
+                                        <constraint firstItem="ZuT-uf-9N1" firstAttribute="centerX" secondItem="oA2-rc-L4H" secondAttribute="centerX" id="Wxa-kp-RaV"/>
+                                        <constraint firstItem="ZuT-uf-9N1" firstAttribute="centerY" secondItem="oA2-rc-L4H" secondAttribute="centerY" id="XC0-ZE-cj0"/>
+                                        <constraint firstItem="ZuT-uf-9N1" firstAttribute="height" secondItem="oA2-rc-L4H" secondAttribute="height" id="ijo-IK-DCp"/>
+                                    </constraints>
                                 </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="personaImageView" destination="ZuT-uf-9N1" id="D3K-Ms-zmJ"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -48,7 +62,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PRJ-Oi-p6H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1223" y="157"/>
+            <point key="canvasLocation" x="1221.7391304347827" y="156.69642857142856"/>
         </scene>
         <!--Filter View Controller-->
         <scene sceneID="sp1-q1-hSA">
@@ -105,7 +119,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nQg-5O-oBl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2000" y="157"/>
+            <point key="canvasLocation" x="1959" y="157"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FQF-a4-93M">

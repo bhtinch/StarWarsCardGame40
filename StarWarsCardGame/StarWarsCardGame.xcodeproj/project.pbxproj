@@ -10,6 +10,7 @@
 		62B5B52026A8BA6800979DD1 /* Persona.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B5B51F26A8BA6800979DD1 /* Persona.swift */; };
 		62B5B52326A8BBF700979DD1 /* CardCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B5B52226A8BBF700979DD1 /* CardCollectionViewController.swift */; };
 		62B5B52626A8BC1100979DD1 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B5B52526A8BC1100979DD1 /* FilterViewController.swift */; };
+		62B5B52926A8C56F00979DD1 /* PersonaCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B5B52826A8C56F00979DD1 /* PersonaCardCollectionViewCell.swift */; };
 		7EDB74E025AF34B500B80B7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDB74DF25AF34B500B80B7D /* AppDelegate.swift */; };
 		7EDB74E225AF34B500B80B7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDB74E125AF34B500B80B7D /* SceneDelegate.swift */; };
 		7EDB74E725AF34B500B80B7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EDB74E525AF34B500B80B7D /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 		62B5B51F26A8BA6800979DD1 /* Persona.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persona.swift; sourceTree = "<group>"; };
 		62B5B52226A8BBF700979DD1 /* CardCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewController.swift; sourceTree = "<group>"; };
 		62B5B52526A8BC1100979DD1 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		62B5B52826A8C56F00979DD1 /* PersonaCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonaCardCollectionViewCell.swift; sourceTree = "<group>"; };
 		7EDB74DC25AF34B500B80B7D /* StarWarsCardGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsCardGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EDB74DF25AF34B500B80B7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EDB74E125AF34B500B80B7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +60,14 @@
 				62B5B52526A8BC1100979DD1 /* FilterViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		62B5B52726A8C55300979DD1 /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				62B5B52826A8C56F00979DD1 /* PersonaCardCollectionViewCell.swift */,
+			);
+			path = "Custom Cells";
 			sourceTree = "<group>";
 		};
 		7EDB74D325AF34B500B80B7D = {
@@ -118,6 +128,7 @@
 		7EDB74FA25AF355B00B80B7D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				62B5B52726A8C55300979DD1 /* Custom Cells */,
 				7EDB74F925AF355300B80B7D /* Storyboards */,
 			);
 			path = Views;
@@ -203,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				62B5B52626A8BC1100979DD1 /* FilterViewController.swift in Sources */,
+				62B5B52926A8C56F00979DD1 /* PersonaCardCollectionViewCell.swift in Sources */,
 				62B5B52026A8BA6800979DD1 /* Persona.swift in Sources */,
 				7EDB74E025AF34B500B80B7D /* AppDelegate.swift in Sources */,
 				7EDB74FD25AF359500B80B7D /* PersonaController.swift in Sources */,
