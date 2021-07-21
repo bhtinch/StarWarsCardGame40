@@ -37,20 +37,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		62B5B51A26A8B24E00979DD1 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		62B5B51B26A8B25400979DD1 /* View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "View Controllers";
-			sourceTree = "<group>";
-		};
 		7EDB74D325AF34B500B80B7D = {
 			isa = PBXGroup;
 			children = (
@@ -70,7 +56,6 @@
 		7EDB74DE25AF34B500B80B7D /* StarWarsCardGame */ = {
 			isa = PBXGroup;
 			children = (
-				62B5B51A26A8B24E00979DD1 /* Models */,
 				7EDB74FB25AF356600B80B7D /* Controllers */,
 				7EDB74FA25AF355B00B80B7D /* Views */,
 				7EDB74F425AF34C400B80B7D /* Resources */,
@@ -117,7 +102,6 @@
 		7EDB74FB25AF356600B80B7D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				62B5B51B26A8B25400979DD1 /* View Controllers */,
 				7EDB74F625AF34D100B80B7D /* Model Controller */,
 			);
 			path = Controllers;
