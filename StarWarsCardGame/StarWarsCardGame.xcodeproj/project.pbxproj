@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		62B5B52026A8BA6800979DD1 /* Persona.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B5B51F26A8BA6800979DD1 /* Persona.swift */; };
 		7EDB74E025AF34B500B80B7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDB74DF25AF34B500B80B7D /* AppDelegate.swift */; };
 		7EDB74E225AF34B500B80B7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDB74E125AF34B500B80B7D /* SceneDelegate.swift */; };
 		7EDB74E725AF34B500B80B7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EDB74E525AF34B500B80B7D /* Main.storyboard */; };
 		7EDB74E925AF34B500B80B7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EDB74E825AF34B500B80B7D /* Assets.xcassets */; };
 		7EDB74EC25AF34B500B80B7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EDB74EA25AF34B500B80B7D /* LaunchScreen.storyboard */; };
-		7EDB74FD25AF359500B80B7D /* CharacterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDB74FC25AF359500B80B7D /* CharacterController.swift */; };
+		7EDB74FD25AF359500B80B7D /* PersonaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDB74FC25AF359500B80B7D /* PersonaController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		62B5B51F26A8BA6800979DD1 /* Persona.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persona.swift; sourceTree = "<group>"; };
 		7EDB74DC25AF34B500B80B7D /* StarWarsCardGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsCardGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EDB74DF25AF34B500B80B7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EDB74E125AF34B500B80B7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -23,7 +25,7 @@
 		7EDB74E825AF34B500B80B7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7EDB74EB25AF34B500B80B7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7EDB74ED25AF34B500B80B7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7EDB74FC25AF359500B80B7D /* CharacterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterController.swift; sourceTree = "<group>"; };
+		7EDB74FC25AF359500B80B7D /* PersonaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonaController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		62B5B51E26A8BA5F00979DD1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				62B5B51F26A8BA6800979DD1 /* Persona.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		7EDB74D325AF34B500B80B7D = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +66,7 @@
 		7EDB74DE25AF34B500B80B7D /* StarWarsCardGame */ = {
 			isa = PBXGroup;
 			children = (
+				62B5B51E26A8BA5F00979DD1 /* Models */,
 				7EDB74FB25AF356600B80B7D /* Controllers */,
 				7EDB74FA25AF355B00B80B7D /* Views */,
 				7EDB74F425AF34C400B80B7D /* Resources */,
@@ -77,7 +88,7 @@
 		7EDB74F625AF34D100B80B7D /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7EDB74FC25AF359500B80B7D /* CharacterController.swift */,
+				7EDB74FC25AF359500B80B7D /* PersonaController.swift */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -177,8 +188,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62B5B52026A8BA6800979DD1 /* Persona.swift in Sources */,
 				7EDB74E025AF34B500B80B7D /* AppDelegate.swift in Sources */,
-				7EDB74FD25AF359500B80B7D /* CharacterController.swift in Sources */,
+				7EDB74FD25AF359500B80B7D /* PersonaController.swift in Sources */,
 				7EDB74E225AF34B500B80B7D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
