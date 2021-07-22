@@ -1,8 +1,150 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xS6-wO-deI">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Cards Collection View Controller-->
+        <scene sceneID="21K-xr-x2Q">
+            <objects>
+                <collectionViewController id="2z8-uC-kiI" customClass="CardsCollectionViewController" customModule="StarWarsCardGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="T4l-Td-LKm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="pPi-gK-VCp">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="personaCell" id="G9q-lv-VFV" customClass="PersonaCollectionViewCell" customModule="StarWarsCardGame" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="LXG-Vm-q3Z">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ud9-Ck-fBt">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Ud9-Ck-fBt" firstAttribute="leading" secondItem="LXG-Vm-q3Z" secondAttribute="leading" id="6EA-7f-a5Y"/>
+                                        <constraint firstItem="Ud9-Ck-fBt" firstAttribute="top" secondItem="LXG-Vm-q3Z" secondAttribute="top" id="RWN-1M-5d1"/>
+                                        <constraint firstAttribute="trailing" secondItem="Ud9-Ck-fBt" secondAttribute="trailing" id="l6I-cb-kwm"/>
+                                        <constraint firstAttribute="bottom" secondItem="Ud9-Ck-fBt" secondAttribute="bottom" id="pJZ-Qw-m65"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="personaImageView" destination="Ud9-Ck-fBt" id="Lkp-92-Ify"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="2z8-uC-kiI" id="YZD-yT-Z51"/>
+                            <outlet property="delegate" destination="2z8-uC-kiI" id="t59-kB-k0u"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="D9G-kR-4cC">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="line.horizontal.3.decrease" catalog="system" id="UyF-gk-6Fq">
+                            <connections>
+                                <segue destination="oD9-Mq-Qp9" kind="presentation" identifier="toFilterVC" id="RlO-VK-AEg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cww-DG-xqI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1089.8550724637682" y="184.82142857142856"/>
+        </scene>
+        <!--Filter View Controller-->
+        <scene sceneID="9By-bG-Hrz">
+            <objects>
+                <viewController id="oD9-Mq-Qp9" customClass="FilterViewController" customModule="StarWarsCardGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qgh-IT-aP0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="y8U-IJ-I0d">
+                                <rect key="frame" x="124" y="226.5" width="166" height="355"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7E-dj-i6R">
+                                        <rect key="frame" x="0.0" y="0.0" width="166" height="165.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="k7E-dj-i6R" secondAttribute="height" multiplier="1:1" id="Kwa-Bf-L4e"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="sith"/>
+                                        <connections>
+                                            <action selector="sithButtonTapped:" destination="oD9-Mq-Qp9" eventType="touchUpInside" id="a0U-fw-S4R"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGj-ia-kg0">
+                                        <rect key="frame" x="0.0" y="189.5" width="166" height="165.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="GGj-ia-kg0" secondAttribute="height" multiplier="1:1" id="FbF-qj-bIp"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="jedi"/>
+                                        <connections>
+                                            <action selector="jediButtonTapped:" destination="oD9-Mq-Qp9" eventType="touchUpInside" id="INK-3d-7KK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your path you must decide." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97u-Ef-2NJ">
+                                <rect key="frame" x="103" y="158" width="208" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rg0-d9-jCX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="y8U-IJ-I0d" firstAttribute="top" secondItem="97u-Ef-2NJ" secondAttribute="bottom" constant="48" id="4j7-aU-d8U"/>
+                            <constraint firstItem="y8U-IJ-I0d" firstAttribute="width" secondItem="Qgh-IT-aP0" secondAttribute="width" multiplier="0.4" id="MMT-NJ-7P6"/>
+                            <constraint firstItem="y8U-IJ-I0d" firstAttribute="centerX" secondItem="rg0-d9-jCX" secondAttribute="centerX" id="Xjk-jf-NqB"/>
+                            <constraint firstItem="y8U-IJ-I0d" firstAttribute="centerY" secondItem="rg0-d9-jCX" secondAttribute="centerY" id="kwN-fs-RW1"/>
+                            <constraint firstItem="97u-Ef-2NJ" firstAttribute="centerX" secondItem="rg0-d9-jCX" secondAttribute="centerX" id="rDF-td-smy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="yKz-Ek-1IL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CbA-Tx-mGq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1835" y="185"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ltw-e3-3BH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xS6-wO-deI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9zt-mE-mYL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2z8-uC-kiI" kind="relationship" relationship="rootViewController" id="dDy-LR-Xax"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g6N-mU-RCi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="311.59420289855075" y="184.82142857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="jedi" width="600" height="600"/>
+        <image name="line.horizontal.3.decrease" catalog="system" width="128" height="73"/>
+        <image name="sith" width="180" height="180"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
